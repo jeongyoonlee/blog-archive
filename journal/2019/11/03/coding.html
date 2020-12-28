@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>코딩효율 2x 늘리기 팁 1탄 – Debugging | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="코딩효율 2x 늘리기 팁 1탄 – Debugging" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://jeongyoonlee.github.io/fastpages-20201228/journal/2019/11/03/coding.html" />
+<meta property="og:url" content="https://jeongyoonlee.github.io/fastpages-20201228/journal/2019/11/03/coding.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-03T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://jeongyoonlee.github.io/fastpages-20201228/journal/2019/11/03/coding.html","@type":"BlogPosting","headline":"코딩효율 2x 늘리기 팁 1탄 – Debugging","dateModified":"2019-11-03T00:00:00-05:00","datePublished":"2019-11-03T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jeongyoonlee.github.io/fastpages-20201228/journal/2019/11/03/coding.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages-20201228/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jeongyoonlee.github.io/fastpages-20201228/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages-20201228/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages-20201228/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages-20201228/about/">About Me</a><a class="page-link" href="/fastpages-20201228/search/">Search</a><a class="page-link" href="/fastpages-20201228/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">코딩효율 2x 늘리기 팁 1탄 – Debugging</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2019-11-03T00:00:00-05:00" itemprop="datePublished">
+        Nov 3, 2019
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages-20201228/categories/#journal">journal</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="https://youtu.be/lGrQJvDRxRw"><img src="https://img.youtube.com/vi/lGrQJvDRxRw/0.jpg" alt="" /></a></p>
+
+<p>안녕하세요, LA오남매아빠, LA오빠입니다.</p>
+
+<p>LA오빠는 즐거운 Data Science, 슬기로운 직장생활, 행복한 가정생활, 이 세 가지 주제에 대해 영상을 올리고 있는데요.</p>
+
+<p>오늘은 즐거운 Data Science 편으로 여러분의 코딩 효율을 2배! 늘려주는 꿀팁을 알려드리겠습니다.</p>
+
+<p>데이터사이언티스트들에게 중요한 기술 중 하나가 바로 코딩입니다.</p>
+
+<p>하지만, 코딩을 집중적으로 배우는 소프트웨어 엔지니어에 비해, 데이터사이언티스트들 중에는 코딩이 약한 분들이 많습니다. 그 이유는:</p>
+
+<p>첫째, 코딩 이외에도 통계와 머신러닝, 시각화, 비지니스 분석등 익혀야 하는 분야가 다양하기 때문에 상대적으로 코딩에 들어가는 시간이 적구요.
+둘째, 대부분의 코딩이 하나의 주피터 노트북이나 R Studio 세션에서 이루어지기 때문에 체계적인 코딩 기법을 적용할 기회가 적기 때문입니다.
+데이터사이언티스트가 코딩을 잘하면 좋은 점이 많은데요.</p>
+
+<ul>
+  <li>우선, 코딩을 잘하면 전반적인 업무 효율이 올라갑니다. 머신러닝이건 시각화건 데이터사이언티스의 거의 모든 업무에 코딩을 사용하기 때문에 코딩을 빨리, 잘하면 남들보다 빨리 업무를 마무리 할 수 있습니다.</li>
+  <li>둘째, 코딩을 잘하면 더 많은 커리어 기회가 생깁니다. 요즘 가장 핫한 테크 쪽 회사들 경우에는, 데이터사이언티스들도 소프트웨어엔지니어 못지 않게 코딩을 하는 경우가 많습니다. 그래서 채용시에도 코딩 인터뷰가 중요한 부분을 차지합니다. 코딩을 잘하면 이런 회사들에서 일할 기회도 생기지요.</li>
+  <li>마지막으로 다른 영역보다 코딩은 향상시키기 쉽습니다. 통계나 머신러닝을 남들보다 2배 잘하기는 어렵지만, 코딩을 2배 잘하기는 비교적 쉽습니다. 배워야 할 것도 잘 정리가 되어있고, 적용했을 때 바로 바로 효과를 볼 수 있기 때문이지요.</li>
+</ul>
+
+<p>자 그럼 어떻게 하면 코딩 효율을 2배 늘릴 수 있을까요?</p>
+
+<p>몇 가지 비법이 있는데, 그 중 오늘 제가 알려드릴 팁은 바로 디버깅입니다.</p>
+
+<p>캠브리지 비지니스 스쿨에서 나온 연구결과에 따르면 개발 시간의 50%가 디버깅에 소요된다고 합니다. 즉 프로그램을 만드는게 걸리는 시간 만큼이나 프로그램에 생긴 문제를 해결하는데 시간을 쓴다는 말이죠. 이 수치가 평균이기 때문에 숙련된 개발자들은 훨씬 적은 시간을 디버깅에 소요하고, 초보 개발자들은 50%이상, 즉 70, 80%의 개발 시간을 디버깅에 소요하고 있다고 볼 수 있습니다.</p>
+
+<p>그렇기 때문에 디버깅을 잘하면 프로그램에 문제가 생겼을 때 훨씬 빨리 해결할 수가 있고 전체 개발 시간을 크게 단축시킬 수 있는 것이죠.</p>
+
+<p>자, 여러분들은 현재 프로그램이 오류가 발생했을 때 어떻게 고치고 계시나요?</p>
+
+<p>많은 분들이 에러 메세지를 인터넷에 검색해보시거나, print문을 통해 입력된 데이터에 문제가 있는지 하나씩 확인을 하실겁니다.</p>
+
+<p>이 방법들은 혼자 작성한 간단한 프로그램에서 생긴 오류를 고칠 때는 유용하지요. 하지만 실무에서 다른 팀원들과 함께 더 복잡한 프로그램을 작성하다 생긴 오류의 경우 이런 식으로 고치기 쉽지 않습니다.</p>
+
+<p>복잡한 프로그램을 디버그 할 때에는 바로 디버거를 쓰시면 좋습니다.</p>
+
+<p>디버거는 프로그램의 오류를 찾거나 테스트하는데 사용하는 프로그램입니다. 대부분의 프로그래밍 언어들은 기본 디버거 프로그램이 있습니다. Python의 경우에는 pdb라는 built-in 디버거가 있지요.</p>
+
+<p>자 그럼, 예제를 통해 디버거로 어떻게 Python 프로그램을 디버깅하는지 살펴보도록 하겠습니다.</p>
+
+<p>데모는 <a href="https://youtu.be/lGrQJvDRxRw">YouTube 동영상</a>을 확인해 주세요.</p>
+
+<p>지금까지 Python debugger를 이용해서 터미널, 코드, IDE 그리고 노트북에서 디버그 하는 방법을 살펴보았습니다. 보신것처럼 디버거를 사용하시면 복잡한 프로그램도 비교적 손쉽게 에러를 확인하고 수정할 수 있습니다.</p>
+
+<p>여러분도 디버거 사용을 익히셔서 여러분의 코딩 효율을 크게 늘릴 수 있으시길 바랍니다.</p>
+
+<p>그럼 화이팅~</p>
+
+  </div><a class="u-url" href="/fastpages-20201228/journal/2019/11/03/coding.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages-20201228/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/fastpages-20201228/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages-20201228/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/fastpages-20201228/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/fastpages-20201228/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
