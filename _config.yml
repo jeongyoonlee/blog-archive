@@ -14,7 +14,7 @@ github_repo: "fastpages-20201228"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-url: "https://jeongyoonlee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jeongyoonlee.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
@@ -34,13 +34,13 @@ url: "https://jeongyoonlee.github.io" # the base hostname & protocol for your si
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "/fastpages-20201228" # the subpath of your site, e.g. "/blog".
+baseurl: "/" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: fastdotai
-    github: fastai
+    twitter: jeongyoonlee
+    github: jeongyoonlee
 
 # Set this to true to get LaTeX math equation support
 use_math: 
