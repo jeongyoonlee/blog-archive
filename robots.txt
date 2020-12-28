@@ -1,1 +1,1 @@
-Sitemap: https://jeongyoonlee.github.io/fastpages-20201228/sitemap.xml
+Sitemap: https://jeongyoonlee.com/sitemap.xml
