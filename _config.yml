@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Jeong-Yoon Lee
+description: Jeong-Yoon Lee's personal blog
 github_username: jeongyoonlee
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "fastpages-20201228"
@@ -58,7 +58,7 @@ annotations: false
 show_tags: true
 
 # Add your Google Analytics ID here if you have one and want to use it
-google_analytics: 
+google_analytics: UA-156815137-1
 
 exclude:
   - docker-compose.yml
