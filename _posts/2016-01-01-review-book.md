@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description:
-categories: [journal]
+categories: [review]
 ---
 # 2015년 돌아보기 - 책
 

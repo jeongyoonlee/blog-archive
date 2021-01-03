@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description:
-categories: [journal]
+categories: [review]
 ---
 # 2016년 하반기 돌아보기 - 운동
 

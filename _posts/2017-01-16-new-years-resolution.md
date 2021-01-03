@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description:
-categories: [journal]
+categories: [review]
 ---
 # 2017년 목표
 

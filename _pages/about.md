@@ -6,7 +6,7 @@ permalink: /about/
 
 I am a native of South Korea and live in Los Angeles, California.  I am a Christian, married to the love of my life, and a father of five children.
 
-I am a Data Scientist working at Netflix.
+I am a Data Scientist at Netflix.
 
 I earned my Ph.D. in Computer Science at University of Southern California, studied Electrical Engineering at Seoul National University and went Chonnam Science High School.  I grew up in [Suncheon](https://en.wikipedia.org/wiki/Suncheon).
 

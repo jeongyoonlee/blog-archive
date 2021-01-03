@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description:
-categories: [journal]
+categories: [review]
 ---
 # 2016년 돌아보기 - 일
 
