@@ -47,6 +47,7 @@ title: Ordinary Morning
 
 모두들 좋은 하루. 
 
-추천곡: 자이언티의 꺼내먹어요
+추천곡: 자이언티가 부릅니다. 꺼내 먹어요.
+"집에 가고 싶죠? (집에 있는데도) 집에 가고 싶을 거야~"
 
 [![](https://img.youtube.com/vi/Ibb5RhoKfzE/0.jpg)](https://youtu.be/Ibb5RhoKfzE)
