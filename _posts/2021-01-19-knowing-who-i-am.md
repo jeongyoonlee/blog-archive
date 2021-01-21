@@ -6,7 +6,7 @@ categories: [Journal, korean]
 title: Knowing Who I am
 ---
 
-![https://amzn.to/2M71dYe]({{ site.baseurl }}/images/20210119-petecarroll.jpg)
+[![]({{ site.baseurl }}/images/20210119-petecarroll.jpg)](https://amzn.to/2M71dYe)
 
 USC 미식축구 팀 코치를 오래하고 시애틀 Seahawks 코치로 있는 Pete Carroll. 
 

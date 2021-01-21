@@ -46,3 +46,7 @@ title: Ordinary Morning
 마음을 다잡고 일을 시작한다.
 
 모두들 좋은 하루. 
+
+추천곡: 자이언티의 꺼내먹어요
+
+[![](https://img.youtube.com/vi/Ibb5RhoKfzE/0.jpg)](https://youtu.be/Ibb5RhoKfzE)
