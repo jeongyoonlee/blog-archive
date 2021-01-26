@@ -6,7 +6,7 @@ categories: [journal, korean]
 title: Bling Empire
 ---
 
-[![]({{ site.baseurl }}/images/bling-empire.jpg)](https://en.wikipedia.org/wiki/Bling_Empire)
+[![]({{ site.baseurl }}/images/bling_empire.jpg)](https://en.wikipedia.org/wiki/Bling_Empire)
 
 어제 Netflix에서 Top 쇼로 선정되어있던 Bling Empire를 잠깐 보았다.
 
