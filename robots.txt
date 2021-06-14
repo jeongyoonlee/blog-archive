@@ -1,1 +1,1 @@
-Sitemap: https://jeongyoonlee.com/sitemap.xml
+Sitemap: https://jeongyoonlee.github.io/sitemap.xml
